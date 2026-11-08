@@ -1,0 +1,10 @@
+[package]
+name = "easy_server"
+description = "a little server backend generator for static html sites written by me in Rust using Axum and Tokio"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = "^0.8.9"

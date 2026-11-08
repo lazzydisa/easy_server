@@ -1,0 +1,10 @@
+# here you should write all your html files
+# for example: root.html
+
+# if you've created a subdirectory then you need to
+# add the name of that subdirectory too
+# for example: sas/sas.html
+
+root.html
+channels.html
+socials.html
