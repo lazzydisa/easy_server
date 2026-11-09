@@ -95,8 +95,8 @@ fn parse_list() -> Result<Vec<String>, String> {
         for c in i.chars() {
             match c {
                 '#' => break,
-                ' ' => continue,
-                _   => st.push(c),
+                ' ' | '\t' => continue,
+                _ => st.push(c),
             }
         }
 
