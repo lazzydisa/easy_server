@@ -80,9 +80,8 @@ fn main() -> Result<(), String> {
 // syntax of list.txt:
 //      # comment
 //      path/to/file.html
-//      sas.html
-// wrong syntax:
-//      sas.html # this line will be dropped!
+//      foo.html    # comment
+//          bar.html
 fn parse_list() -> Result<Vec<String>, String> {
     let file = match std::fs::read_to_string("list.txt") {
         Ok(f) => f,
@@ -91,9 +90,18 @@ fn parse_list() -> Result<Vec<String>, String> {
     let mut vec: Vec<String> = Vec::new();
 
     for i in file.lines() {
-        if i.contains("#") { continue }
-        if i == "".to_string() { continue }
-        vec.push(i.to_string());
+        let mut st = String::new();
+
+        for c in i.chars() {
+            match c {
+                '#' => break,
+                ' ' => continue,
+                _   => st.push(c),
+            }
+        }
+
+        if st == "".to_string() { continue }
+        vec.push(st);
     }
 
     Ok(vec)

@@ -3,8 +3,8 @@
 
 # if you've created a subdirectory then you need to
 # add the name of that subdirectory too
-# for example: sas/sas.html
+# for example: foo/bar.html
 
-root.html
+root.html # test
 channels.html
-socials.html
+    socials.html
