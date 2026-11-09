@@ -12,13 +12,13 @@ case $1 in
     "release" | "r")
         case $2 in
             "") $0 help;;
-            *) cargo run -r --bin easy_server -- $2;;
+            *) cargo run -r --bin lazy_server -- $2;;
         esac
     ;;
     "test" | "t")
         case $2 in
             "") $0 help;;
-            *) cargo run --bin easy_server -- $2;;
+            *) cargo run --bin lazy_server -- $2;;
         esac
     ;;
     "setup" | "s") cargo run --bin setup;;
