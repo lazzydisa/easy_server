@@ -1,0 +1,12 @@
+[alias]
+# run setup build to setup the server to use your html files
+setup = "run --bin setup"
+s = "run --bin setup"
+
+# run server after all needed setups in dev build
+test = "run --bin lazy_server --"
+t = "run --bin lazy_server --"
+
+# run server after all needed setups in release build
+release = "run --release --bin lazy_server --"
+r = "run --release --bin lazy_server --"

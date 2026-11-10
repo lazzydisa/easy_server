@@ -1,7 +1,7 @@
 `lazy_server` is a little project that is needed for generating a backend for a ststic html sites
 
-To create a site you need to add html files to the `sources` directory and add filenames in the `list.txt`
-if you put files in a subdirectory, then you need to add directory name with the filename to the `list.txt` too!
+To create a site you need to add html files to the `sources` directory and add filenames in the `list.txt`.
+If you put files in a subdirectory, then you need to add directory name with the filename to the `list.txt` too!
 
 Example for `list.txt`:
 ```
@@ -19,13 +19,19 @@ foo/bar2.html
 Usage:
 ```sh
 # to setup/update backend:
-./build.sh setup
+cargo setup
+# or
+cargo s
 
-# to run server:
-./build.sh release "ip:port"
+# to run the server as dev build:
+cargo test
+# or
+cargo t
 
-# to see all `build.sh` commands:
-./build.sh help
+# to run the server as release build:
+cargo release
+# or
+cargo r
 ```
 
 Also don't forget to delete example files in `sources/`!
