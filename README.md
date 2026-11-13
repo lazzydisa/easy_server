@@ -24,14 +24,14 @@ cargo setup
 cargo s
 
 # to run the server as dev build:
-cargo test
+cargo test "ip:port"
 # or
-cargo t
+cargo t "ip:port"
 
 # to run the server as release build:
-cargo release
+cargo release "ip:port"
 # or
-cargo r
+cargo r "ip:port"
 ```
 
 Also don't forget to delete example files in `sources/`!
